@@ -1,0 +1,5 @@
+.DS_Store
+.project
+go.mod
+go.sum
+conflictSim
