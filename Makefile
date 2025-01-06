@@ -12,7 +12,7 @@ all: build
 build: 
 	$(GOBUILD) -o $(BINARY_NAME) -v
 build linux:
-	GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_NAME) -v
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_NAME) -v
 clean: 
 	rm $(GOMOD_FILE)
 	rm $(GOMOD_SUM)
