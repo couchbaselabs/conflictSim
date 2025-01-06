@@ -4,7 +4,7 @@ GOBUILD=$(GOCMD) build
 GOCLEAN=$(GOCMD) clean
 GOGET=$(GOCMD) get
 GOMOD=$(GOCMD) mod
-BINARY_NAME=conflictSim
+BINARY_NAME=conflictSim.bin
 GOMOD_FILE=go.mod
 GOMOD_SUM=go.sum
 
