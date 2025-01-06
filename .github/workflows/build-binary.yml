@@ -22,7 +22,7 @@ jobs:
         go-version: '1.23'
 
     - name: Build
-      run: make deps && make
+      run: make deps && make && ls && pwd
 
     - name: Upload the binary
       uses: skx/github-action-publish-binaries@master
