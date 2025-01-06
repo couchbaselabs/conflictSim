@@ -19,10 +19,7 @@ jobs:
           go-version: '1.23'
 
       - name: Build the binary
-        run: |
-          export GOOS=linux
-          export GOARCH=amd64
-          make deps && make
+        run: make deps && make build linux
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
