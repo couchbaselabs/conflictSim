@@ -5,9 +5,11 @@ A docloader to generate and simulate conflicting writes between two given couchb
 ## Installation on macOS
 Prerequisites: Golang
 
-1. `$ make clean # for cleaning previous installations, if any`
-2. `$ make deps # To install the golang dependencies`
-3. `$ make`
+```
+$ make clean # for cleaning previous installations, if any
+$ make deps  # to install the golang dependencies
+$ make
+```
 
 ## Usage
 Either install the binary from source as mentioned above for macOS or download the binary from the latest release and give the binary the executable permissions for linux/amd64 systems.
@@ -46,6 +48,6 @@ Usage of ./conflictSim:
 
 ## Example
 ```
-./conflictSim -source 172.100.23.100:8091 -target 172.100.23.105:8091 -srcBucket bucket-1 -tgtBucket bucket-2 -srcUsername Administrator -tgtUsername Administrator -srcPassword wewewe -tgtPassword wewewe -numConflicts 1000000 -batchSize 1000 -gap 3000 -workers 500
+$ ./conflictSim -source 172.100.23.100:8091 -target 172.100.23.105:8091 -srcBucket bucket-1 -tgtBucket bucket-2 -srcUsername Administrator -tgtUsername Administrator -srcPassword wewewe -tgtPassword wewewe -numConflicts 1000000 -batchSize 1000 -gap 3000 -workers 500
 ```
-The above command means that a total of `1000000` conflicts will be generated between `bucket-1` of couchbase cluster `172.100.23.100:8091` and `bucket-2` of couchbase cluster `172.100.23.101:8091`. The conflicts will be generated in such a way that `1000` conflicts will be generated every `3000` milliseconds or 3 seconds by 500 application threads.
+The above command means that a total of `1000000` conflicts will be generated between `bucket-1` of couchbase cluster `172.100.23.100:8091` and `bucket-2` of couchbase cluster `172.100.23.101:8091`. The conflicts will be generated in such a way that `1000` conflicts will be generated every `3000` milliseconds or 3 seconds by `500` application threads.
